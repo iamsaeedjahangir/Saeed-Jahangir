@@ -39,4 +39,59 @@
         border-radius: 30px;
         font-size: 16px;
         cursor: pointer;
-        transition
+        transition: 0.3s;
+    }
+    .yes {
+        background-color: #fff;
+        color: #ff4e75;
+        font-weight: bold;
+    }
+    .no {
+        background-color: #333;
+        color: white;
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    .hidden {
+        display: none;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Mahnoor Jutt 💖</h1>
+    <p>I have just one simple question for you...</p>
+    <h2>Will you be my Valentine?</h2>
+
+    <div class="buttons">
+        <button class="yes" onclick="showYes()">Yes ❤️</button>
+        <button class="no" onclick="showNo()">No 😢</button>
+    </div>
+
+    <div id="yesMessage" class="hidden">
+        <p>“Some people make the world beautiful just by being in it… and you are one of them.”</p>
+        <p>Let’s celebrate love, laughter, and unforgettable memories together! 🌹✨🎉</p>
+    </div>
+
+    <div id="noMessage" class="hidden">
+        <p>Are you sure? 🥺 Maybe try clicking Yes... ❤️</p>
+    </div>
+</div>
+
+<script>
+function showYes() {
+    document.getElementById("yesMessage").style.display = "block";
+    document.getElementById("noMessage").style.display = "none";
+}
+function showNo() {
+    document.getElementById("noMessage").style.display = "block";
+    document.getElementById("yesMessage").style.display = "none";
+}
+</script>
+
+</body>
+</html>
